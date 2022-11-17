@@ -20,6 +20,7 @@
     "electron": "^21.3.0"
   },
   "dependencies": {
+    "@nut-tree/nut-js": "^2.3.0",
     "electron-squirrel-startup": "^1.0.0"
   }
 }

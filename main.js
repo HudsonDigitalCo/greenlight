@@ -7,10 +7,12 @@ const path = require('path')
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 275,
+    height: 400,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true,  // this is what allows us to use require statements in imported files
+      contextIsolation: false,  // this is what allows us to use require statements in imported files
     }
   })
 
@@ -18,7 +20,7 @@ const createWindow = () => {
   mainWindow.loadFile('index.html')
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools({mode: 'detach'})
 }
 
 // This method will be called when Electron has finished
