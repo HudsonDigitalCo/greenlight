@@ -1,10 +1,11 @@
 {
-  "name": "green-light",
+  "name": "greenlight",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
+    "dev": "nodemon --watch . --exec 'electron-forge start'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
     "make": "electron-forge make"
@@ -17,10 +18,12 @@
     "@electron-forge/maker-rpm": "^6.0.3",
     "@electron-forge/maker-squirrel": "^6.0.3",
     "@electron-forge/maker-zip": "^6.0.3",
-    "electron": "^21.3.0"
+    "electron": "^21.3.0",
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
     "@nut-tree/nut-js": "^2.3.0",
+    "bootstrap": "^5.2.2",
     "electron-squirrel-startup": "^1.0.0"
   }
 }

@@ -2,7 +2,11 @@
 
 ## How to run
 
-```npm run start```
+```npm start```
+
+or with nodemon:
+
+```npm dev```
 
 ## Reference
 

@@ -9,6 +9,8 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 275,
     height: 400,
+    titleBarStyle: 'hidden',
+    titleBarOverlay: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,  // this is what allows us to use require statements in imported files
@@ -17,10 +19,10 @@ const createWindow = () => {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('src/index.html')
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools({mode: 'detach'})
+  // mainWindow.webContents.openDevTools({mode: 'detach'})
 }
 
 // This method will be called when Electron has finished
