@@ -1,12 +1,47 @@
 
-body {background-color:#282c35}
+/* body {background-color:#282c35;
+border-color: red;
+border-width: 4px;} */
 
+
+header{
+    background-color:#282c35;
+    border-color: #282c35;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Space from this element (entire page) and others*/
+    padding: 0; /*space from content and border*/
+    border: solid #282c35;
+    border-width: 20px;
+    display:block;
+    box-sizing: border-box;
+    background-color:#21242b;
+}
+/* https://raw.githubusercontent.com/joshdick/onedark.vim/main/img/color_reference.png */
 #state-button {
     background-color:#282c35;
-    border-color: white;
-    color: white;
+    border-color: #282c35;
+    color: #98c379;
+    /* color: #E06C75; */
 }
 
 #title {
-    color: white;
+    color: #ABB2BF;
 }
+
+#inner-body{
+    background-color:#111215;
+    height: max-content;
+}
+
+.titlebar {
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+  }
+  
+  .titlebar-button {
+    -webkit-app-region: no-drag;
+  }

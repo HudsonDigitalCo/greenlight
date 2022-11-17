@@ -1,7 +1,7 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow,nativeTheme } = require('electron')
 const path = require('path')
 
 const createWindow = () => {
@@ -11,6 +11,7 @@ const createWindow = () => {
     height: 400,
     titleBarStyle: 'hidden',
     titleBarOverlay: true,
+    frame: false, 
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,  // this is what allows us to use require statements in imported files
@@ -18,11 +19,14 @@ const createWindow = () => {
     }
   })
 
+  // only has dark mode support for the moment
+  nativeTheme.themeSource = 'dark'
+
   // and load the index.html of the app.
   mainWindow.loadFile('src/index.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools({mode: 'detach'})
+  mainWindow.webContents.openDevTools({mode: 'detach'})
 }
 
 // This method will be called when Electron has finished
