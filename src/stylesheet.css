@@ -15,11 +15,12 @@ html,body{
     margin: 0; /* Space from this element (entire page) and others*/
     padding: 0; /*space from content and border*/
     border: solid #282c35;
-    border-width: 20px;
+    border-width: 16px;
     display:block;
     box-sizing: border-box;
     background-color:#21242b;
 }
+
 /* https://raw.githubusercontent.com/joshdick/onedark.vim/main/img/color_reference.png */
 #state-button {
     background-color:#282c35;

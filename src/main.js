@@ -1,4 +1,4 @@
-// main.js
+"use strict";
 
 // Modules to control application life and create native browser window
 const { app, BrowserWindow,nativeTheme } = require('electron')
@@ -9,9 +9,14 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 275,
     height: 400,
-    titleBarStyle: 'hidden',
-    titleBarOverlay: true,
-    frame: false, 
+
+    // Start: this is what hides the title bar and makes it "frameless"
+    // @TODO: with this enabled, you can't drag the window
+    // titleBarStyle: 'hidden', 
+    // titleBarOverlay: true,
+    // frame: false, 
+    // End: this is what hides the title bar and makes it "frameless"
+
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,  // this is what allows us to use require statements in imported files

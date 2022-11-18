@@ -1,4 +1,4 @@
-// preload.js
+"use strict";
 
 // All the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
