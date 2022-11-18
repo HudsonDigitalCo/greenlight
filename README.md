@@ -2,11 +2,15 @@
 
 ## How to run
 
-```npm start```
+```npm run start```
 
 or with nodemon:
 
-```npm dev```
+```npm run dev```
+
+## How to package
+
+```npm run make```
 
 ## Reference
 
